@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Madam Jiii ❤️</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    background: linear-gradient(135deg, #180d20, #35152e, #170d25);
+    color: #fff0f6;
+    overflow-x: hidden;
+}
+
+.heart {
+    position: fixed;
+    bottom: -30px;
+    color: #ff82b2;
+    animation: floatUp 8s linear infinite;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.65;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+    20% {
+        opacity: 0.7;
+    }
+    100% {
+        transform: translateY(-110vh) rotate(35deg);
+        opacity: 0;
+    }
+}
+
+header {
+    text-align: center;
+    padding: 25px 15px;
+    position: relative;
+    z-index: 1;
+}
+
+header h2 {
+    color: #ff9ec8;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+header p {
+    color: #d9b9cf;
+    font-size: 13px;
+    margin-top: 7px;
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+    width: 92%;
+    max-width: 680px;
+    margin: 10px auto 40px;
+}
+
+.card {
+    background: rgba(25, 12, 30, 0.88);
+    border: 1px solid rgba(255, 145, 194, 0.28);
+    border-radius: 20px;
+    padding: 28px 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.18);
+}
+
+.main {
+    text-align: center;
+    padding: 35px 20px;
+}
+
+.tag {
+    display: inline-block;
+    color: #ffc0db;
+    border: 1px solid #77405f;
+    padding: 7px 13px;
+    border-radius: 30px;
+    font-size: 12px;
+    margin-bottom: 22px;
+}
+
+h1 {
+    font-size: clamp(30px, 7vw, 43px);
+    color: #ff9ec8;
+    margin-bottom: 15px;
+}
+
+h2.section-title {
+    color: #ff9ec8;
+    font-size: 23px;
+    margin-bottom: 15px;
+}
+
+p {
+    line-height: 1.8;
+    font-size: 15px;
+    color: #f0dce9;
+}
+
+.main-text {
+    max-width: 480px;
+    margin: 0 auto 20px;
+}
+
+.gif {
+    display: block;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 16px;
+    margin: 20px auto;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.music-btn {
+    position: fixed;
+    z-index: 5;
+    top: 15px;
+    right: 15px;
+    background: #452039;
+    border: 1px solid #b95e8b;
+    color: white;
+    border-radius: 25px;
+    padding: 10px 14px;
+}
+
+.music-btn:hover {
+    background: #683054;
+}
+
+.main-btn {
+    display: inline-block;
+    margin-top: 10px;
+    background: #f36da6;
+    color: #311123;
+    font-weight: bold;
+    padding: 14px 24px;
+    border-radius: 30px;
+    box-shadow: 0 5px 20px rgba(243, 109, 166, 0.18);
+}
+
+.main-btn:hover {
+    transform: scale(1.04);
+    background: #ff9ec8;
+}
+
+.note {
+    border-left: 3px solid #ff83b5;
+    padding: 5px 0 5px 15px;
+}
+
+.letter {
+    line-height: 1.95;
+    white-space: pre-line;
+}
+
+.signature {
+    color: #ff9ec8;
+    font-weight: bold;
+    margin-top: 18px;
+}
+
+.promises {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 18px;
+}
+
+.promise {
+    background: #2b172c;
+    border: 1px solid #553047;
+    border-radius: 13px;
+    padding: 15px 10px;
+    text-align: center;
+}
+
+.promise .emoji {
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.promise h3 {
+    color: #ffb3d2;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.promise p {
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.surprise {
+    display: none;
+    text-align: center;
+    margin-top: 20px;
+    padding: 20px 12px;
+    background: #32172d;
+    border: 1px dashed #e87eae;
+    border-radius: 15px;
+    animation: appear 0.5s ease;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.surprise h2 {
+    color: #ff9ec8;
+    margin-bottom: 12px;
+}
+
+footer {
+    text-align: center;
+    color: #cda9c1;
+    padding: 0 15px 30px;
+    font-size: 12px;
+    position: relative;
+    z-index: 1;
+}
+
+@media (max-width: 480px) {
+    .card {
+        padding: 23px 17px;
+    }
+
+    .promises {
+        grid-template-columns: 1fr;
+    }
+
+    .promise {
+        padding: 15px;
+    }
+
+    .gif {
+        width: 130px;
+        height: 130px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<button class="music-btn" id="musicBtn"
+onclick="toggleMusic()">♫ Music: OFF</button>
+
+<header>
+    <h2>For My Madam Jiii ❤️</h2>
+    <p>Ek chhoti si koshish, sirf aapke liye...</p>
+</header>
+
+<div class="container">
+
+    <section class="card main">
+        <div class="tag">A little message from me 💌</div>
+
+        <h1>Hellooo Madam Jiii 🥹❤️</h1>
+
+        <p class="main-text">
+            Pata hai aap mujhse gussa ho...
+            aur shayad hona bhi chahiye.
+            Ek din aapse baat nahi ki,
+            phir hamari ladaai bhi ho gayi.
+            Par sach bolun? Aap mere liye bahut special ho.
+        </p>
+
+        <!-- GIF: internet connection required -->
+        <img
+            class="gif"
+            src="https://media.tenor.com/8K6p6g9z0ZAAAAAi/bear-love.gif"
+            alt="Cute little love GIF"
+            onerror="this.style.display='none';"
+        >
+
+        <p>
+            Toh socha, normal sorry bolne se achha...
+            aapke liye kuch special banaya jaaye. 🫶
+        </p>
+
+        <br>
+
+        <button class="main-btn"
+        onclick="showSurprise()">
+            Ek baat sunogi? 💗
+        </button>
+
+        <div class="surprise" id="surprise">
+            <h2>Madam Jiii 🥺💖</h2>
+            <p>
+                I am really sorry yaar.
+                Aap mere liye important ho,
+                aur main nahi chahta ki meri wajah se
+                aap udaas raho.
+                Jab aapka mann ho, mujhse baat kar lena.
+                Main aapki baat sununga. ❤️
+            </p>
+            <br>
+            <p>Ek chhoti si smile toh banti hai na? 🥹🌷</p>
+        </div>
+    </section>
+
+    <section class="card">
+        <h2 class="section-title">💌 Chhota sa Sorry Note</h2>
+
+        <div class="note">
+            <p>
+                Madam Jiii, sorry yaar. ❤️
+
+                Ek din aapse baat nahi hui aur phir
+                hamare beech ladaai bhi ho gayi.
+                Mujhe achha nahi lagta jab hum aise
+                naraz rehte hain.
+
+                Main ye nahi bolunga ki aap turant
+                sab bhool jao. Bas jab aap ready ho,
+                toh please mujhse baat kar lena.
+
+                Aapki smile bahut pyaari hai...
+                aur main use wapas dekhna chahta hoon. 🥹
+            </p>
+        </div>
+    </section>
+
+    <section class="card">
+        <h2 class="section-title">💗 Aapke Naam Ek Letter</h2>
+
+        <p class="letter">Dear Madam Jiii ❤️,
+
+Pata nahi main apni baat sahi se samjha paunga
+ya nahi, par dil se kuch kehna hai.
+
+Mujhe pata hai ki ek din aapse baat na karne
+se aapko bura laga hoga. Uske baad hamari
+ladaai hui, toh baat aur kharab ho gayi.
+
+Agar meri wajah se aap hurt hui ho,
+toh I am genuinely sorry. Mera intention
+aapko hurt karna nahi tha, lekin main samajhta
+hoon ki aapko kaisa feel hua hoga.
+
+Main ye nahi chahta ki hum kabhi lade hi na.
+Kabhi-kabhi misunderstanding ho sakti hai.
+Bas itna chahta hoon ki hum ek doosre ki baat
+samjhein aur gusse mein bhi ek doosre ki
+feelings ki respect karein.
+
+Aap mere liye special ho, Madam Jiii.
+Aur aapki narazgi ko main mazaak mein
+nahi lena chahta.
+
+Jab aapka mann kare, mujhse baat kar lena.
+Main aapki baat sunne ke liye yahin hoon.
+
+Aur haan... aapko tang karna shayad
+main poori tarah band nahi kar paunga 😂❤️
+par aapko hurt na karne ki koshish
+zaroor karunga.
+
+Apna khayal rakhna, Madam Jiii. 🌷
+
+            <span class="signature">Aapka pagal sa insaan ❤️</span></p>
+    </section>
+
+    <section class="card">
+        <h2 class="section-title">🤞 Kuch Chhote Se Vaade</h2>
+
+        <p>
+            Bade-bade promises nahi, bas kuch
+            simple si baatein:
+        </p>
+
+        <div class="promises">
+
+            <div class="promise">
+                <div class="emoji">💬</div>
+                <h3>Communication</h3>
+                <p>
+                    Busy hua toh koshish karunga
+                    ki aapko bata doon.
+                </p>
+            </div>
+
+            <div class="promise">
+                <div class="emoji">🫶</div>
+                <h3>Understanding</h3>
+                <p>
+                    Aapki feelings ko samajhne
+                    ki koshish karunga.
+                </p>
+            </div>
+
+            <div class="promise">
+                <div class="emoji">❤️</div>
+                <h3>Respect</h3>
+                <p>
+                    Ladaai mein bhi aapki
+                    respect karunga.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="card main">
+        <h2 class="section-title">Ek Last Baat... 🥺</h2>
+
+        <p>
+            Gussa ho toh ho jao, Madam Jiii.
+            Aapko time chahiye toh woh bhi le lo.
+            Bas jab mann kare, ek baar baat kar lena.
+
+            <br><br>
+
+            Aap mere liye special thi,
+            special ho, aur special rahogi. ❤️
+        </p>
+
+        <br>
+
+        <button class="main-btn"
+        onclick="finalMessage()">
+            Maaf kar dogi? 🥹💗
+        </button>
+
+        <p id="finalText"
+        style="display:none; margin-top:20px; color:#ff9ec8;">
+            Thank you meri Madam Jiii ❤️🥹
+            <br>
+            Aapki smile hamesha bani rahe. 🌷
+        </p>
+    </section>
+
+</div>
+
+<footer>
+    Made with ❤️, thodi si coding aur bahut saari feelings.
+    <br><br>
+    Sirf meri Madam Jiii ke liye 🌷
+</footer>
+
+<script>
+let audioContext = null;
+let musicTimer = null;
+let musicPlaying = false;
+let noteIndex = 0;
+
+const notes = [
+    261.63, 329.63, 392.00, 329.63,
+    293.66, 349.23, 440.00, 349.23
+];
+
+function playNote() {
+    if (!musicPlaying || !audioContext) return;
+
+    const oscillator = audioContext.createOscillator();
+    const gain = audioContext.createGain();
+
+    oscillator.type = "sine";
+    oscillator.frequency.value = notes[noteIndex % notes.length];
+
+    gain.gain.setValueAtTime(0.0001, audioContext.currentTime);
+    gain.gain.exponentialRampToValueAtTime(
+        0.035, audioContext.currentTime + 0.08
+    );
+    gain.gain.exponentialRampToValueAtTime(
+        0.0001, audioContext.currentTime + 0.65
+    );
+
+    oscillator.connect(gain);
+    gain.connect(audioContext.destination);
+
+    oscillator.start();
+    oscillator.stop(audioContext.currentTime + 0.7);
+
+    noteIndex++;
+}
+
+async function toggleMusic() {
+    const button = document.getElementById("musicBtn");
+
+    if (musicPlaying) {
+        musicPlaying = false;
+        clearInterval(musicTimer);
+        button.textContent = "♫ Music: OFF";
+        return;
+    }
+
+    try {
+        const AudioContextClass =
+            window.AudioContext || window.webkitAudioContext;
+
+        if (!AudioContextClass) {
+            alert("Sorry, aapke browser mein music support nahi hai.");
+            return;
+        }
+
+        if (!audioContext) {
+            audioContext = new AudioContextClass();
+        }
+
+        if (audioContext.state === "suspended") {
+            await audioContext.resume();
+        }
+
+        musicPlaying = true;
+        button.textContent = "♫ Music: ON";
+
+        playNote();
+        musicTimer = setInterval(playNote, 700);
+    } catch (error) {
+        musicPlaying = false;
+        button.textContent = "♫ Music: OFF";
+        alert("Music start nahi hua. Browser mein dobara try karo.");
+    }
+}
+
+function showSurprise() {
+    const box = document.getElementById("surprise");
+
+    box.style.display = "block";
+    box.scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+    });
+}
+
+function finalMessage() {
+    const message = document.getElementById("finalText");
+
+    message.style.display = "block";
+    message.scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+    });
+
+    createHearts(12);
+}
+
+function createHearts(count = 1) {
+    for (let i = 0; i < count; i++) {
+        const heart = document.createElement("div");
+
+        heart.className = "heart";
+        heart.textContent = ["❤️", "💗", "💕", "💖"][i % 4];
+
+        heart.style.left = Math.random() * 95 + "vw";
+        heart.style.animationDuration =
+            (5 + Math.random() * 5) + "s";
+
+        heart.style.fontSize =
+            (14 + Math.random() * 16) + "px";
+
+        document.body.appendChild(heart);
+
+        setTimeout(() => heart.remove(), 10000);
+    }
+}
+
+setInterval(() => createHearts(), 1000);
+</script>
+
+</body>
+</html>
